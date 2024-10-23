@@ -164,7 +164,7 @@ ground.src = './ground.jpg'
 
 
 const GAME_WIDTH = 350
-const GAME_HEIGHT = 150
+const GAME_HEIGHT = 100
 
 
 function setScreen() {
@@ -350,7 +350,8 @@ function render() {
     
     if (gameState == 2){
         ctx.fillStyle = 'white'
-        ctx.font = "40px serif";
+        let font_size = 40 * scaleRasio
+        ctx.font = toString(font_size) + "px serif";
         ctx.textAlign = 'center'
         ctx.fillText('Вы разбиты', canvas.width/2, 40, canvas.width)
         ctx.fillText('Ганибал у варот', canvas.width/2, 80, canvas.width)
@@ -361,7 +362,7 @@ function render() {
     
     if (gameState == 3){
         ctx.fillStyle = 'white'
-        ctx.font = "40px serif";
+        ctx.font = toString(font_size) + "px serif";
         ctx.textAlign = 'center'
         ctx.fillText('Ганибал разбит', canvas.width/2, 40, canvas.width)
         ctx.fillText('На карфаген!!!', canvas.width/2, 80, canvas.width)
