@@ -164,7 +164,7 @@ ground.src = './ground.jpg'
 
 
 const GAME_WIDTH = 350
-const GAME_HEIGHT = 150
+const GAME_HEIGHT = 175
 
 
 function setScreen() {
