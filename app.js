@@ -193,7 +193,7 @@ let dX = 4*scaleRatio
 let dY = 3*scaleRatio
 
 canvas.addEventListener('touchmove', function(move){
-        
+        move.preventDefault();
         let x = move.changedTouches[0].pageX
         let y = move.changedTouches[0].pageY
         
