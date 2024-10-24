@@ -183,6 +183,7 @@ if (screen.orientation) {
 }
 
 let gameState = 0
+let font_size;
 
 let fabio = new Player(rome_legion, 300*scaleRatio, 50*scaleRatio, 20*scaleRatio, 20*scaleRatio, 6)
 let hanibal = new Player(punic_cavalery, 25*scaleRatio, 50*scaleRatio, 20*scaleRatio, 20*scaleRatio, 6)
@@ -316,7 +317,7 @@ function render() {
     if (gameState == 0){
         ctx.fillStyle = 'white'
         let localScaleRatio = getScaleRatio()
-        let font_size = 40 * localScaleRatio
+        font_size = 40 * localScaleRatio
         ctx.textAlign = 'center'
         ctx.fillText('Наведите курсор', canvas.width/2, 100*localScaleRatio, canvas.width)
         ctx.fillText('чтобы начать', canvas.width/2, 140*localScaleRatio, canvas.width)
