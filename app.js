@@ -184,8 +184,8 @@ if (screen.orientation) {
 
 let gameState = 0
 
-let fabio = new Player(rome_legion, 300*scaleRatio, 50*scaleRatio, 25*scaleRatio, 25*scaleRatio, 6)
-let hanibal = new Player(punic_cavalery, 25*scaleRatio, 50*scaleRatio, 25*scaleRatio, 25*scaleRatio, 6)
+let fabio = new Player(rome_legion, 300*scaleRatio, 50*scaleRatio, 20*scaleRatio, 20*scaleRatio, 6)
+let hanibal = new Player(punic_cavalery, 25*scaleRatio, 50*scaleRatio, 20*scaleRatio, 20*scaleRatio, 6)
 let fabioCountObj = document.getElementById('fabio_xp')
 let hanibalCountObj = document.getElementById('hanibal_xp')
 
