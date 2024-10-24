@@ -308,15 +308,6 @@ function update_data() {
 }
 
 
-if (gameState == 1){
-    console.log('sound request')
-    sound.addEventListener('loadmetadata', function() {
-        console.log('sound work')
-        sound.play()
-    })
-}
-
-
 function render() {
     ctx.drawImage(ground, 0, 0, canvas.width, canvas.height)
     drawSprite(fabio.get_draw_info())
@@ -324,13 +315,14 @@ function render() {
     
     if (gameState == 0){
         ctx.fillStyle = 'white'
-        ctx.font = "40px serif";
+        let localScaleRatio = getScaleRatio()
+        let font_size = 40 * localScaleRatio
         ctx.textAlign = 'center'
-        ctx.fillText('Наведите курсор', canvas.width/2, 100*scaleRatio, canvas.width)
-        ctx.fillText('чтобы начать', canvas.width/2, 140*scaleRatio, canvas.width)
+        ctx.fillText('Наведите курсор', canvas.width/2, 100*localScaleRatio, canvas.width)
+        ctx.fillText('чтобы начать', canvas.width/2, 140*localScaleRatio, canvas.width)
         
-        ctx.strokeText('Наведите курсор', canvas.width/2, 100*scaleRatio, canvas.width)
-        ctx.strokeText('чтобы начать', canvas.width/2, 140*scaleRatio, canvas.width)
+        ctx.strokeText('Наведите курсор', canvas.width/2, 100*localScaleRatio, canvas.width)
+        ctx.strokeText('чтобы начать', canvas.width/2, 140*localScaleRatio, canvas.width)
     }
     
     if (gameState == 1){
@@ -350,25 +342,25 @@ function render() {
     
     if (gameState == 2){
         ctx.fillStyle = 'white'
-        let font_size = 40 * scaleRasio
+        
         ctx.font = `${font_size}px serif`;
         ctx.textAlign = 'center'
-        ctx.fillText('Вы разбиты', canvas.width/2, 40, canvas.width)
-        ctx.fillText('Ганибал у варот', canvas.width/2, 80, canvas.width)
+        ctx.fillText('Вы разбиты', canvas.width/2, 40*localScaleRatio, canvas.width)
+        ctx.fillText('Ганибал у варот', canvas.width/2, 80*localScaleRatio, canvas.width)
         
-        ctx.strokeText('Вы разбиты', canvas.width/2, 40, canvas.width)
-        ctx.strokeText('Ганибал у варот', canvas.width/2, 80, canvas.width)
+        ctx.strokeText('Вы разбиты', canvas.width/2, 40*localScaleRatio, canvas.width)
+        ctx.strokeText('Ганибал у варот', canvas.width/2, 80*localScaleRatio, canvas.width)
     }
     
     if (gameState == 3){
         ctx.fillStyle = 'white'
         ctx.font = `${font_size}px serif`;
         ctx.textAlign = 'center'
-        ctx.fillText('Ганибал разбит', canvas.width/2, 40, canvas.width)
-        ctx.fillText('На карфаген!!!', canvas.width/2, 80, canvas.width)
+        ctx.fillText('Ганибал разбит', canvas.width/2, 40*localScaleRatio, canvas.width)
+        ctx.fillText('На карфаген!!!', canvas.width/2, 80*localScaleRatio, canvas.width)
         
-        ctx.strokeText('Ганибал разбит', canvas.width/2, 40, canvas.width)
-        ctx.strokeText('На карфаген!!!', canvas.width/2, 80, canvas.width)
+        ctx.strokeText('Ганибал разбит', canvas.width/2, 40*localScaleRatio, canvas.width)
+        ctx.strokeText('На карфаген!!!', canvas.width/2, 80*localScaleRatio, canvas.width)
     }
     
 }
