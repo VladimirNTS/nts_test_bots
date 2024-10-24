@@ -106,7 +106,12 @@ function getScaleRatio() {
     if (screenWidth / screenHeight < GAME_WIDTH / GAME_HEIGHT) {
         return screenWidth / GAME_WIDTH;
     } else {
-        return screenHeight / GAME_HEIGHT;
+        if (screenHeight > GAME_HEIGHT) {
+            return screenHeight / GAME_HEIGHT;
+        }
+        else{
+            return screenHeight / MIN_GAME_HEIGHT;
+        }
     }
 }
 
@@ -165,6 +170,7 @@ ground.src = './ground.jpg'
 
 const GAME_WIDTH = 350
 const GAME_HEIGHT = 175
+const MIN_GAME_HEIGHT = 125
 
 let scaleRatio;
 
