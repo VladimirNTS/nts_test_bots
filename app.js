@@ -351,7 +351,7 @@ function render() {
     if (gameState == 2){
         ctx.fillStyle = 'white'
         let font_size = 40 * scaleRasio
-        ctx.font = toString(font_size) + "px serif";
+        ctx.font = `${font_size}px serif`;
         ctx.textAlign = 'center'
         ctx.fillText('Вы разбиты', canvas.width/2, 40, canvas.width)
         ctx.fillText('Ганибал у варот', canvas.width/2, 80, canvas.width)
@@ -362,7 +362,7 @@ function render() {
     
     if (gameState == 3){
         ctx.fillStyle = 'white'
-        ctx.font = toString(font_size) + "px serif";
+        ctx.font = `${font_size}px serif`;
         ctx.textAlign = 'center'
         ctx.fillText('Ганибал разбит', canvas.width/2, 40, canvas.width)
         ctx.fillText('На карфаген!!!', canvas.width/2, 80, canvas.width)
