@@ -106,12 +106,7 @@ function getScaleRatio() {
     if (screenWidth / screenHeight < GAME_WIDTH / GAME_HEIGHT) {
         return screenWidth / GAME_WIDTH;
     } else {
-        if (screenHeight > GAME_HEIGHT) {
-            return screenHeight / GAME_HEIGHT;
-        }
-        else{
-            return screenHeight / MIN_GAME_HEIGHT;
-        }
+        return screenHeight / GAME_HEIGHT;
     }
 }
 
@@ -169,15 +164,20 @@ ground.src = './ground.jpg'
 
 
 const GAME_WIDTH = 350
-const GAME_HEIGHT = 175
-const MIN_GAME_HEIGHT = 75
+const GAME_HEIGHT = 200
+const MIN_GAME_HEIGHT = 100
 
 let scaleRatio;
 
 function setScreen() {
     scaleRatio = getScaleRatio();
     canvas.width = GAME_WIDTH * scaleRatio;
-    canvas.height = GAME_HEIGHT * scaleRatio
+    if GAME_HEIGHT * scaleRatio < innerHeight{
+        canvas.height = GAME_HEIGHT * scaleRatio
+    }
+    else{
+        canvas.height = MIN_GAME_HEIGHT * scaleRatio
+    }
 }
 
 
