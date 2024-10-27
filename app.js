@@ -165,7 +165,7 @@ ground.src = './ground.jpg'
 
 const GAME_WIDTH = 350
 const GAME_HEIGHT = 200
-const MIN_GAME_HEIGHT = 100
+const MIN_GAME_HEIGHT = 150
 
 let scaleRatio;
 
