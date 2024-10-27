@@ -172,7 +172,7 @@ let scaleRatio;
 function setScreen() {
     scaleRatio = getScaleRatio();
     canvas.width = GAME_WIDTH * scaleRatio;
-    if GAME_HEIGHT * scaleRatio < innerHeight{
+    if (GAME_HEIGHT * scaleRatio < innerHeight){
         canvas.height = GAME_HEIGHT * scaleRatio
     }
     else{
